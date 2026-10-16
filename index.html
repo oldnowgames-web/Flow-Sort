@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Flow Sort</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="screen on" id="menu">
+  <h1>Flow<br>Sort</h1>
+  <p class="sub">Separe as peças por cor e cor por caixa.</p>
+  
+  <div class="menu-end">
+    <button class="btn" id="play">Jogar</button>
+    <button class="btn alt" id="levels">Fases</button>
+    <button class="btn alt" id="skb">Skins</button>
+    <button class="btn alt" id="howb">Como jogar</button>
+    <button class="btn alt" id="snd">Som: ligado</button>
+  </div>
+</section>
+
+<section class="screen" id="lvls">
+  <div class="bar"><button class="ibtn" data-go="menu" aria-label="Voltar">‹</button><div class="title">Escolha a fase</div><span style="width:46px"></span></div>
+  <div id="grid"></div>
+</section>
+
+<section class="screen" id="skins">
+  <div class="bar"><button class="ibtn" data-go="menu" aria-label="Voltar">‹</button><div class="title">Skins</div><span style="width:46px"></span></div>
+  <div class="sks" id="sks"></div>
+</section>
+
+<section class="screen" id="how">
+  <div class="bar"><button class="ibtn" data-go="menu" aria-label="Voltar">‹</button><div class="title">Como jogar</div><span style="width:46px"></span></div>
+  <div class="how">
+    <p>Toque numa caixa para pegar as peças do topo e toque em outra para soltar.</p>
+    <p>Só dá para soltar sobre a mesma cor ou numa caixa vazia. Cada caixa leva 4 peças.</p>
+    <p>Complete todas as caixas com uma só cor para vencer. Travou? Desfaça ou peça uma dica (3 por fase).</p>
+  </div>
+</section>
+
+<section class="screen" id="game">
+  <div class="bar">
+    <button class="ibtn" id="pb" aria-label="Pausar" style="font-size:16px;letter-spacing:-2px">❚❚</button>
+    <div class="title" id="gt">Fase 1<small id="gm">0 jogadas</small></div>
+    <button class="ibtn" id="rs" aria-label="Reiniciar">↻</button>
+  </div>
+  <div id="board"></div>
+  <div class="foot">
+    <button class="btn alt" id="undo" style="min-width:140px;font-size:18px">Desfazer</button>
+    <button class="btn alt" id="hint" style="min-width:140px;font-size:18px">Dica (3)</button>
+  </div>
+</section>
+
+<div class="modal" id="pause"><div class="card">
+  <h2>Pausado</h2>
+  <button class="btn" id="resume">Continuar</button>
+  <button class="btn alt" id="prs">Reiniciar fase</button>
+  <button class="btn alt" id="plv">Fases</button>
+  <button class="btn alt" id="pmn">Menu inicial</button>
+  <button class="btn alt" id="psn">Som: ligado</button>
+</div></div>
+
+<div class="modal" id="win"><div class="card">
+  <h2>Fase completa!</h2>
+  <div class="stars" id="st"></div>
+  <p id="wm" style="margin:0 0 10px"></p>
+  <button class="btn" id="next">Próxima fase</button>
+  <button class="btn alt" id="again">Jogar de novo</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
